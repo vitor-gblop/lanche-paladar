@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  /* Fundo escuro premium, comum em casas de aposta */
+  background-color: #0f172a; 
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+}
+
+.invite-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.badge {
+  display: inline-block;
+  background-color: #fbbf24; /* Dourado */
+  color: #451a03;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Destaque financeiro (O valor do bônus) */
+.reward-box {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Verde dinheiro */
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 4px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.reward-box .currency {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reward-box .amount {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+/* Prova Social com animação de pulsar */
+.social-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Botões */
+.btn-primary {
+  width: 100%;
+  padding: 16px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+}
+
+/* Configurações do Popover Nativo */
+#popover {
+  border-radius: 16px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 24px;
+}
+
+#popover::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+#popover:popover-open {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 340px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#popover .content {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#popover .content h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+#popover .content p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* Agrupamento de botões do Modal */
+#popover div.dialog-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#popover div.dialog-btn button,
+#popover div.dialog-btn a {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+#popover div.dialog-btn .continue {
+  background-color: #3b82f6; /* Azul chamativo */
+  color: white;
+}
+
+#popover div.dialog-btn .close {
+  background-color: transparent;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}
+
+#popover div.dialog-btn button:hover,
+#popover div.dialog-btn a:hover {
+  opacity: 0.8;
+}

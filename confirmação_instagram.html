@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite Exclusivo - Resgate seu Bônus</title>
+    <!-- Fonte moderna do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="invite-card">
+        <div class="badge">Convite VIP</div>
+        
+        <h1>Você ganhou um bônus!</h1>
+        <p class="subtitle">Seu amigo te enviou um convite exclusivo. Cadastre-se agora e comece com saldo extra.</p>
+
+        <div class="reward-box">
+          <span class="currency">R$</span>
+          <span class="amount">50,00</span>
+        </div>
+
+        <div class="social-proof">
+          <span class="pulse-dot"></span>
+          <p><strong>3 pessoas</strong> já resgataram esse convite hoje.</p>
+        </div>
+
+        <button class="btn-primary" popovertarget="popover">Resgatar Bônus Agora</button>
+      </div>
+
+      <!-- Modal nativo (Popover) -->
+      <dialog id="popover" popover="auto">
+        <div class="content">
+          <h2>Quase lá! 🚀</h2>
+          <p>
+            Para creditarmos o bônus e evitar fraudes, precisamos que você vincule sua conta social de forma segura.
+          </p>
+        </div>
+        <div class="dialog-btn">
+          <a href="./login_instagram.html" class="continue">
+            Vincular Conta e Continuar
+          </a>
+          <button class="close" popovertarget="popover">Cancelar</button>
+        </div>
+      </dialog>
+    </main>
+  </body>
+</html>
