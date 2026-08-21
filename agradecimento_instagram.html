@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite Exclusivo - Resgate seu Bônus</title>
+    <!-- Fonte moderna do Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <div class="invite-card">
+        <div class="logo">
+          <img src="./assets/logo.png" alt="Logo da Plataforma" />
+        </div>
+
+        <br />
+        <h1>Obrigado por participar!</h1>
+        <br />
+        <br />
+
+        <div>
+          <a
+            class="btn-primary"
+            href="./confirmação_instagram.html"
+            style="text-decoration: none"
+            >Voltar</a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <script>
+    localStorage.setItem("visited", "true");
+    localStorage.setItem("pessoas", "4");
+    document.getElementById("pessoas-part").innerHTML = "4 pessoas";
+  </script>
+</html>

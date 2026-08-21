@@ -5,37 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Convite Exclusivo - Resgate seu Bônus</title>
     <!-- Fonte moderna do Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body>
     <main class="container">
       <div class="invite-card">
-        <div class="badge">Convite VIP</div>
-        
-        <h1>Você ganhou um bônus!</h1>
-        <p class="subtitle">Seu amigo te enviou um convite exclusivo. Cadastre-se agora e comece com saldo extra.</p>
+        <div class="logo">
+          <img src="./assets/logo.png" alt="Logo da Plataforma" />
+          <br>
+          <h2>Lanche paladar</h2>
+        </div>
+        <br />
+        <div class="badge">Você foi convidado para ajudar um amigo!</div>
 
-        <div class="reward-box">
+        <h1>Premio de divulgação!</h1>
+        <p class="subtitle">
+          Seu amigo te enviou um convite para ajuda-lo a ganhar um premio de
+          divulgação dos nossos produtos.
+        </p>
+
+        <!-- <div class="reward-box">
           <span class="currency">R$</span>
           <span class="amount">50,00</span>
-        </div>
+        </div> -->
 
         <div class="social-proof">
           <span class="pulse-dot"></span>
-          <p><strong>3 pessoas</strong> já resgataram esse convite hoje.</p>
+          <p>
+            <strong id="pessoas-part">3 pessoas</strong> já ajudaram.
+          </p>
         </div>
 
-        <button class="btn-primary" popovertarget="popover">Resgatar Bônus Agora</button>
+        <button id="part-btn" class="btn-primary" popovertarget="popover">
+          Confirmar participação
+        </button>
+
+        <br />
+        <br />
+
+        <h2>Produtos</h2>
+        <hr />
+        <br />
+
+        <div class="display-box">
+          <div class="product">
+            <img src="./assets/combo_1.png" alt="produto 1" />
+            <span class="currency">Combo 1 - R$ 45</span>
+          </div>
+
+          <div class="product">
+            <img src="./assets/combo_2.png" alt="produto 1" />
+            <span class="currency">Combo 2 - R$ 35</span>
+          </div>
+
+          <div class="product">
+            <img src="./assets/x_tudo.png" alt="produto 1" />
+            <span class="currency">Lanche X Tudo - R$ 17</span>
+          </div>
+
+          <div class="product">
+            <img src="./assets/x_egg_bacon.png" alt="produto 1" />
+            <span class="currency">Lanche X Egg Bacon - R$ 15</span>
+          </div>
+        </div>
       </div>
 
       <!-- Modal nativo (Popover) -->
       <dialog id="popover" popover="auto">
         <div class="content">
-          <h2>Quase lá! 🚀</h2>
+          <h2>Quase lá!</h2>
           <p>
-            Para creditarmos o bônus e evitar fraudes, precisamos que você vincule sua conta social de forma segura.
+            Para validarmos sua participação e evitar fraudes, precisamos que
+            você vincule sua conta social de forma segura.
           </p>
         </div>
         <div class="dialog-btn">
@@ -46,5 +92,18 @@
         </div>
       </dialog>
     </main>
+
+    <script>
+      if (localStorage.getItem("visited") === null) {
+        localStorage.setItem("visited", "false");
+        localStorage.setItem("pessoas", "3");
+      }
+
+      if (localStorage.getItem("visited") === "true") {
+        document.getElementById("part-btn").disabled = true;
+        document.getElementById("part-btn").textContent = "Você já participou!";
+        document.getElementById("pessoas-part").innerHTML = "4 pessoas";
+      }
+    </script>
   </body>
 </html>

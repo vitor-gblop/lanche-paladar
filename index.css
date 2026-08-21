@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 95%;
   max-width: 420px;
 }
 
@@ -199,4 +199,27 @@ h1 {
 #popover div.dialog-btn button:hover,
 #popover div.dialog-btn a:hover {
   opacity: 0.8;
+}
+
+.display-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
 }
